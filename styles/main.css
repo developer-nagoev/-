@@ -1731,10 +1731,10 @@ EFFECTS
 }
 
 .design__phone {
-  position: absolute;
-  width: calc(100% - 39%);
-  bottom: calc(100% - 125%);
-  right: calc(100% - 126%);
+	position: absolute;
+	width: calc(100% - 39%);
+	bottom: calc(100% - 115%);
+	right: calc(100% - 99%);
 }
 
 .accordion-item:not(:last-child) {
