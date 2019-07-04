@@ -69,4 +69,26 @@
 		event.preventDefault();
 		modalMap.classList.remove('modal-map--open');
 	});
+	// counts stats
+	const counts = document.querySelectorAll('.stats-list__count');
+	const countsValues = [42, 123, 15, 99, 24];
+	function scoreCounting(startPos, endPos, intervalValue) {
+		let score = 0;
+		let timer = setInterval(() => {
+			if (score < startPos) {
+				score++;
+				endPos.textContent = score;
+			} else {
+				clearInterval(timer);
+			}
+		}, intervalValue);
+	}
+	setTimeout(() => {
+		scoreCounting(countsValues[0], counts[0], 60);
+		scoreCounting(countsValues[1], counts[1], 60);
+		scoreCounting(countsValues[2], counts[2], 60);
+		scoreCounting(countsValues[3], counts[3], 60);
+		scoreCounting(countsValues[4], counts[4], 60);
+	}, 2000);
+
 })();
